@@ -30,9 +30,13 @@ class App extends Component {
           <Nav />
         </header>
         <body>
-          <Groups groups={this.state.groups}/>
-          <Users users={this.state.users}/>
-          <SaveButton />
+          <div className="group-pane">
+            <Groups groups={this.state.groups}/>
+            <Users users={this.state.users}/>
+          </div>
+          <div className="button-pane">
+            <SaveButton />
+          </div>
         </body>
       </div>
     );

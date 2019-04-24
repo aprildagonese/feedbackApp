@@ -1,43 +1,33 @@
 import React, { Component } from 'react';
-// import './Users.css';
-
-// class User extends Component {
-//   render() {
-//     return (
-//       <div className="user">
-//         User
-//       </div>
-//     );
-//   }
-// }
-//
 
 class User extends Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
+  constructor() {
+    super();
     this.state = {assigned: false};
   }
 
-  handleChange(e) {
-    this.setState({assigned: true});
+  handleChange = () => {
+    if (this.state.assigned) {
+      this.setState({assigned:false})
+    } else {
+      this.setState({assigned:true})
+    };
   }
 
   render() {
-    const assignment = this.state.assigned;
-    const name = this.state.name;
-    if (assignment) {
+    if (this.state.assigned) {
       return (
-        <div className="user">
+        <button onClick={this.handleChange} className="user">
           User is assigned.
-        </div>
+        </button>
+      )
+    } else {
+      return (
+        <button onClick={this.handleChange} className="user">
+          User is not assigned.
+        </button>
       )
     }
-    return (
-      <div className="user">
-        User is not assigned.
-      </div>
-    )
   }
 }
 

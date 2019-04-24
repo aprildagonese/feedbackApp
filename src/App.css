@@ -1,1 +1,26 @@
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-pane {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.button-pane {
+  display: flex;
+  justify-content: center;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+}
