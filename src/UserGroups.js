@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Groups from './Groups';
-// import Group from './Group';
 import Users from './Users';
-// import User from './User';
 
 class UserGroups extends Component {
   constructor(props) {
