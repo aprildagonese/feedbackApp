@@ -8,7 +8,7 @@ class UserGroups extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.handleClick = this.handleClick.bind(this);
+    this.toggleAssign = this.toggleAssign.bind(this);
   };
 
   componentDidMount() {
@@ -20,17 +20,23 @@ class UserGroups extends Component {
     )
   }
 
-  handleClick() {
-        this.setState(prevState => ({
-            isToggleOn: !prevState.isToggleOn
-          }));
-    }
+  toggleAssign(user) {
+    this.setState(prevState => ({
+      Team1: [...prevState.Team1, user]
+    }))
+  }
+
+  // handleClick() {
+  //       this.setState(prevState => ({
+  //           isToggleOn: !prevState.isToggleOn
+  //         }));
+  //   }
 
   render() {
     return (
       <div className="user-groups">
         <Groups groups={this.props.groups}/>
-        <Users users={this.props.users}/>
+        <Users users={this.props.users} assignUser={this.toggleAssign}/>
       </div>
     );
   }

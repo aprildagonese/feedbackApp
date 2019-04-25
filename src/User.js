@@ -9,19 +9,19 @@ class User extends Component {
                   };
   }
 
-  toggleAssigned = () => {
-    this.setState({assigned: !this.state.assigned})
+  handleChange = () => {
+    this.props.assignUser(this.props.name)
   }
 
   render() {
     return (
       <span>
         {
-          this.state.assigned
-          ? <button onClick={this.toggleAssigned} className="user">
+          this.props.assigned
+          ? <button onClick={this.handleChange} className="user">
               {this.props.name} is assigned.
             </button>
-          : <button onClick={this.toggleAssigned} className="user">
+          : <button onClick={this.handleChange} className="user">
               {this.props.name} is not assigned.
             </button>
          }
