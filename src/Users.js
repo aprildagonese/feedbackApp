@@ -9,7 +9,9 @@ class Users extends Component {
         { this.props.users.map(user =>
           <User name={user.name}
                 key={user.id}
-                assignUser={this.props.assignUser}/>)}
+                assignUser={this.props.assignUser}
+                unassignUser={this.props.unassignUser}
+                />)}
       </div>
     );
   }
