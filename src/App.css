@@ -4,7 +4,7 @@ body {
   flex-direction: column;
 }
 
-.group-pane {
+.user-groups{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

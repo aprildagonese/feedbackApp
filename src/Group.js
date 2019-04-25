@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 // import './Groups.css';
 
-class GroupCard extends Component {
+class Group extends Component {
   render() {
     return (
       <div className="group-card">
-        GroupCard
+        {this.props.name}
       </div>
     );
   }
 }
 
-export default GroupCard;
+export default Group;

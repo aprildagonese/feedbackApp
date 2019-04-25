@@ -3,31 +3,30 @@ import React, { Component } from 'react';
 class User extends Component {
   constructor() {
     super();
-    this.state = {assigned: false};
+    this.state = {
+                  assigned: false,
+                  group: ""
+                  };
   }
 
-  handleChange = () => {
-    if (this.state.assigned) {
-      this.setState({assigned:false})
-    } else {
-      this.setState({assigned:true})
-    };
+  toggleAssigned = () => {
+    this.setState({assigned: !this.state.assigned})
   }
 
   render() {
-    if (this.state.assigned) {
-      return (
-        <button onClick={this.handleChange} className="user">
-          User is assigned.
-        </button>
-      )
-    } else {
-      return (
-        <button onClick={this.handleChange} className="user">
-          User is not assigned.
-        </button>
-      )
-    }
+    return (
+      <span>
+        {
+          this.state.assigned
+          ? <button onClick={this.toggleAssigned} className="user">
+              {this.props.name} is assigned.
+            </button>
+          : <button onClick={this.toggleAssigned} className="user">
+              {this.props.name} is not assigned.
+            </button>
+         }
+       </span>
+    )
   }
 }
 
