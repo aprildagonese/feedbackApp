@@ -25,17 +25,17 @@ class User extends Component {
 
   render() {
     return (
-      <span>
+      <span className="grouping-span">
         {
           this.state.assigned
           ? <button
               onClick={this.unassignUser}
-              className="user">
+              className="user grouping-button">
                 Unassign {this.props.name}
             </button>
           : <button
               onClick={this.assignUser}
-              className="user"
+              className="user grouping-button"
               disabled={this.props.selectedGroup === null}>
                 {this.props.name} is not assigned.
             </button>

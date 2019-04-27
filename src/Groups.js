@@ -5,7 +5,7 @@ import Group from './Group';
 class Groups extends Component {
   render() {
     return (
-      <div className="groups">
+      <div className="groups pane">
         { this.props.groups.map(group =>
           <Group name={group} key={group}
                  selectGroup={this.props.selectGroup}

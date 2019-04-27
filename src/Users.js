@@ -5,7 +5,7 @@ import User from './User';
 class Users extends Component {
   render() {
     return (
-      <div className="users">
+      <div className="users pane">
         { this.props.users.map(user =>
           <User name={user.name}
                 key={user.id}

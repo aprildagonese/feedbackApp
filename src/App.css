@@ -1,40 +1,18 @@
 body {
   display: flex;
   flex-direction: column;
-}
-
-.grouping-pane{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 1%;
-}
-
-.button-pane {
-  display: flex;
-  justify-content: center;
-  padding-top: 2%;
+  background-color: snow;
 }
 
 .reusable-button {
   margin: .5%;
 }
 
-.users {
-  display: flex;
-  flex-direction: column;
-}
-
-.groups {
-  display: flex;
-  flex-direction: column;
-}
-
-.selected-group {
-  background-color: turquoise;
-}
-
 .notice {
   text-align: center;
   padding: 1%;
+}
+
+span {
+  max-width: none;
 }

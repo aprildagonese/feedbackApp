@@ -12,17 +12,17 @@ class Group extends Component {
 
   render() {
     return (
-      <span className="group-card">
+      <span className="grouping-span">
         {
           this.props.selectedGroup === this.props.name
           ? <button
               onClick={this.deselectGroup}
-              className="group selected-group">
+              className="group selected-group grouping-button">
                 {this.props.name}
             </button>
           : <button
               onClick={this.selectGroup}
-              className="group">
+              className="group grouping-button">
                 {this.props.name}
             </button>
         }

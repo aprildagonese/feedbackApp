@@ -19,7 +19,8 @@ class Nav extends Component {
         <span className="main-nav">
           <span className="logo-block">
             <img className="logo-image" src={logo}/>
-            <span className="logo">Turing Feedback</span>
+            <span className="logo turing">turing</span>
+            <span className="logo feedback">feedback</span>
           </span>
           <span className="navbar-toggle"
                 id="js-navbar-toggle"

@@ -5,6 +5,7 @@ import Users from './Users';
 import Nav from './Nav';
 import Button from './Button';
 import './App.css';
+import './groupingPane.css'
 
 class App extends Component {
   constructor(props) {
