@@ -10,7 +10,7 @@ class User extends Component {
   }
 
   assignUser = () => {
-    this.props.assignUser(this.props.name);
+    this.props.assignUser(this.props.name, this.props.selectedGroup);
     this.setState(prevState => ({
               assigned: !prevState.assigned
             }));
@@ -28,11 +28,16 @@ class User extends Component {
       <span>
         {
           this.state.assigned
-          ? <button onClick={this.unassignUser} className="user">
-              {this.props.name} is assigned.
+          ? <button
+              onClick={this.unassignUser}
+              className="user">
+                Unassign {this.props.name}
             </button>
-          : <button onClick={this.assignUser} className="user">
-              {this.props.name} is not assigned.
+          : <button
+              onClick={this.assignUser}
+              className="user"
+              disabled={this.props.selectedGroup === null}>
+                {this.props.name} is not assigned.
             </button>
          }
        </span>

@@ -6,7 +6,12 @@ class Groups extends Component {
   render() {
     return (
       <div className="groups">
-        { this.props.groups.map(group => <Group name={group} key={group}/>) }
+        { this.props.groups.map(group =>
+          <Group name={group} key={group}
+                 selectGroup={this.props.selectGroup}
+                 deselectGroup={this.props.deselectGroup}
+                 selectedGroup={this.props.selectedGroup}
+                 />) }
       </div>
     );
   }

@@ -11,6 +11,7 @@ class Users extends Component {
                 key={user.id}
                 assignUser={this.props.assignUser}
                 unassignUser={this.props.unassignUser}
+                selectedGroup={this.props.selectedGroup}
                 />)}
       </div>
     );

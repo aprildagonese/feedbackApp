@@ -4,7 +4,7 @@ body {
   flex-direction: column;
 }
 
-.user-groups{
+.grouping-pane{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -13,6 +13,11 @@ body {
 .button-pane {
   display: flex;
   justify-content: center;
+  padding-top: 2%;
+}
+
+.reusable-button {
+  margin: .5%;
 }
 
 .users {
@@ -23,4 +28,13 @@ body {
 .groups {
   display: flex;
   flex-direction: column;
+}
+
+.selected-group {
+  background-color: turquoise;
+}
+
+.notice {
+  text-align: center;
+  padding: 1%;
 }
